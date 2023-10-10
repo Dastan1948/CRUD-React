@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dastan",
+      "surname": "Sultanaliev",
+      "age": "18",
+      "email": "dastan.6380@gmail.com"
+    },
+    {
+      "name": "Maksat",
+      "surname": "Sultanaliev",
+      "age": "20",
+      "email": "maksat@gmail.com",
+      "id": 2
+    }
+  ]
+}
