@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SearchBar } from './SearchBar'
 
-const Navbar = () => {
+const Navbar = ({searchValue, setSearchValue}) => {
 	return (
 		<header className='bg-slate-400 py-3'>
 			<div className='container max-w-[1200px] mx-auto'>
@@ -20,7 +20,7 @@ const Navbar = () => {
 							</li>
 						</ul>
 					</nav>
-					<SearchBar />
+					<SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
 				</div>
 			</div>
 		</header>

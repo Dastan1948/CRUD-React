@@ -1,16 +1,16 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import TableRow from '../components/TableRow'
+import React from 'react'
 import TableHead from '../components/TableHead'
+import TableRow from '../components/TableRow'
 
-const Home = () => {
-	const [data, setData] = useState([])
-
-	useEffect(() => {
-		axios.get('http://localhost:3000/users').then(res => {
-			setData(res.data)
+const Home = ({ data, searchValue }) => {
+	const users = data
+		.filter(value => {
+			if (value.name.toLowerCase().includes(searchValue.toLowerCase())) {
+				return true
+			}
+			return false
 		})
-	}, [])
+		.map(user => <TableRow key={user.id} data={user} />)
 
 	return (
 		<div className='w-[50%] mx-auto'>
@@ -20,11 +20,7 @@ const Home = () => {
 					<thead>
 						<TableHead />
 					</thead>
-					<tbody>
-						{data.map(user => (
-							<TableRow key={user.id} data={user} />
-						))}
-					</tbody>
+					<tbody>{users}</tbody>
 				</table>
 			</div>
 		</div>
