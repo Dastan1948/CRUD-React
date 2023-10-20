@@ -19,6 +19,7 @@ const Create = () => {
       .then(res => {
         console.log(res)
         navigate('/')
+				location.reload()
       })
       .catch(err => console.log(err))
   }

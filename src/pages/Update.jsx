@@ -30,8 +30,9 @@ const Update = () => {
     axios.patch(`http://localhost:3000/users/${id}`, values)
       .then(res => {
         navigate('/')
+				location.reload()
       })
-      .catch(err => console.log(reportError))
+      .catch(err => console.log(err))
   }
 
 

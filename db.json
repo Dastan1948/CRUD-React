@@ -13,6 +13,13 @@
       "age": "20",
       "email": "maksat@gmail.com",
       "id": 2
+    },
+    {
+      "name": "Eldar",
+      "surname": "Sultanbekov",
+      "age": "19",
+      "email": "eldar@gmail.com",
+      "id": 3
     }
   ]
 }

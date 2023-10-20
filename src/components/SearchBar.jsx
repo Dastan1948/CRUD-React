@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { searchContext } from '../context/searchContext'
 
-export const SearchBar = ({ searchValue, setSearchValue }) => {
+export const SearchBar = () => {
+
+	const { searchValue, setSearchValue } = useContext(searchContext)
+
 	return (
 		<div className='relative'>
 			<svg

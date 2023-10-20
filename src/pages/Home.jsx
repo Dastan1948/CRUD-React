@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TableHead from '../components/TableHead'
 import TableRow from '../components/TableRow'
+import { searchContext } from '../context/searchContext'
 
-const Home = ({ data, searchValue }) => {
+const Home = () => {
+	const { data, searchValue } = useContext(searchContext)
+
 	const users = data
 		.filter(value => {
 			if (value.name.toLowerCase().includes(searchValue.toLowerCase())) {
